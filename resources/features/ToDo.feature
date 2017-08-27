@@ -5,7 +5,7 @@ Background:
    Given the user is on mvc angular page
    
 Scenario: User should be able to create a new item in to do list and be able to view it
-When the user creates a new item "Add first item"  in ToDo 
+When the user creates a item "Add first item"  in ToDo 
 Then he should be able to view it.
 
 
@@ -13,9 +13,14 @@ Scenario: User should be able to set an item complete once the task is done.
 When the user tries to complete the item "Add first item"
 Then the user should not be able to view the item
 
+ 
 Scenario: User should be able to reactivate a completed item.
 Given user has a completed item "Add first item"
 When the user tries to toggle the item 
+Then he should be able to view it.
+
+Scenario: User should be able to add a second item
+When the user creates a item "Add second item"  in ToDo 
 Then he should be able to view it.
 
 Scenario: User should be able to complete all active todo items
@@ -33,4 +38,5 @@ Then the user should not be able to view the item
 Scenario: User should be able to clear all completed To-do items from the list completely
 When the user selects clear completed
 Then the user should see an empty panel
+
 
