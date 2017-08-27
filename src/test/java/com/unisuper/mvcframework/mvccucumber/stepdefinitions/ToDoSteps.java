@@ -33,7 +33,7 @@ public class ToDoSteps {
 	
 
 
-	@When("^the user creates a new item \"([^\"]*)\"  in ToDo$")
+	@When("^the user creates a item \"([^\"]*)\"  in ToDo$")
 	public void usercreatesnewitem(String newitem) throws Throwable {
 		this.item = newitem;
 		objangularpage.enterdata(newitem);
@@ -90,6 +90,12 @@ public class ToDoSteps {
 	   // throw new PendingException();
 	}
 
+	@When("^the user adds a second item \"([^\"]*)\"$")
+	public void the_user_adds_a_second_item(String arg1) throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+	    //throw new PendingException();
+	}
+	
 	@When("^the user toggles the menu selection$")
 	public void the_user_toggles_the_menu_selection() throws Throwable {
 		objangularpage=objangularpage.completemenutoggle();
