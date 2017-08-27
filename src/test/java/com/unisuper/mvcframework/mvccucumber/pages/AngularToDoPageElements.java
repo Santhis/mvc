@@ -20,8 +20,8 @@ public class AngularToDoPageElements {
 	@FindBy(id="clear-completed")
 	private WebElement clearcompleted;
 
-	 //@FindBy(css = "label.ng-dblclick="/"editTodo(todo)"/")
-	@FindBy(xpath =".//*[@id='todo-list']//label")
+	 //@FindBy(xpath = "//label[contains(.,'text')]/preceding-sibling::input")
+	@FindBy(xpath ="(.//*[@id='todo-list']//label)[last()]")
 	 private WebElement itemlabel;
 	  
 	 @FindBy(id= "toggle-all")
